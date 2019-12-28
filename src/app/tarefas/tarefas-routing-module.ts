@@ -2,6 +2,7 @@ import { Routes} from '@angular/router';
 
 import { ListarTarefaComponent } from './listar';
 import { CadastrarTarefaComponent } from './cadastrar';
+import { EditarTarefaComponent } from './editar';
 
 export const TarefaRoutes: Routes = [
     {
@@ -21,6 +22,11 @@ export const TarefaRoutes: Routes = [
         path:'tarefas',
         redirectTo:'/tarefas/listar',
         pathMatch: 'full'
+    },
+    {
+        path:'tarefas/editar/:id',
+        component: EditarTarefaComponent
     }
+
 
 ];
