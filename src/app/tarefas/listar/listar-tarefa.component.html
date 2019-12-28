@@ -15,7 +15,7 @@
         </tr>
         <tr *ngFor = "let tarefa of tarefas">
             <td [class.success]="!tarefa.concluida">
-                {{tarefa.name}}
+                {{tarefa.nome}}
             </td>
             <td style="width: 70px" class="text-center">
                 <input type="checkbox"
@@ -33,7 +33,8 @@
                     </span> Editar               
                 </a>
                 <a href="#" title="Remover" alt="Remover"       
-                    class="btn btn-xs btn-danger">
+                    class="btn btn-xs btn-danger"
+                    (click)="remover($event, tarefa)">
                     <span 
                         class="glyphicon glyphicon-remove" 
                         aria-hidden="true">

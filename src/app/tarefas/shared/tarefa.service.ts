@@ -9,7 +9,7 @@ export class TarefaService {
 
   constructor() { }
 
-  listarTodos(): tarefa[] {
+  listarTodos(): Tarefa[] {
     const tarefas = localStorage['tarefas'];
     return tarefas ? JSON.parse(tarefas) : [];
   }
