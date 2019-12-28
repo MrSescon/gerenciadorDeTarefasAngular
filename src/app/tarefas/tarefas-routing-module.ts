@@ -16,6 +16,11 @@ export const TarefaRoutes: Routes = [
     {
         path: 'tarefas/cadastrar',
         component: CadastrarTarefaComponent
+    },
+    {
+        path:'tarefas',
+        redirectTo:'/tarefas/listar',
+        pathMatch: 'full'
     }
 
 ];
